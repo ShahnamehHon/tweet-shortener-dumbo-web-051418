@@ -29,19 +29,19 @@ def bulk_tweet_shortener(tweet_array)
   tweet_array.each {|tweet| puts word_substituter(tweet)}
 end
 
-+def selective_tweet_shortener(tweet)
-+  if tweet.length > 140
-+    return word_substituter(tweet)
-+  else
-+    return tweet
-+  end
-+end
-+
-+def shortened_tweet_truncator(tweet)
-+  if selective_tweet_shortener(tweet).length > 140
-+    return "#{selective_tweet_shortener(tweet)[0...137]}..."
-+  else
-+    return selective_tweet_shortener(tweet)
-+  end
-+end 
+def selective_tweet_shortener(tweet)
+  if tweet.length > 140
+    return word_substituter(tweet)
+  else
+    return tweet
+  end
+end
+
+def shortened_tweet_truncator(tweet)
+  if selective_tweet_shortener(tweet).length > 140
+    return "#{selective_tweet_shortener(tweet)[0...137]}..."
+  else
+    return selective_tweet_shortener(tweet)
+  end
+end 
   
